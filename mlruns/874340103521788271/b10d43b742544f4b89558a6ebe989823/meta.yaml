@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/874340103521788271/b10d43b742544f4b89558a6ebe989823/artifacts
+end_time: 1729795617131
+entry_point_name: ''
+experiment_id: '874340103521788271'
+lifecycle_stage: active
+run_id: b10d43b742544f4b89558a6ebe989823
+run_name: mysterious-gull-980
+run_uuid: b10d43b742544f4b89558a6ebe989823
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1729795614969
+status: 3
+tags: []
+user_id: nitish_0184

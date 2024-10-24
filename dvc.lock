@@ -89,3 +89,19 @@ stages:
       hash: md5
       md5: f7dae11d3ce2d308aee34e42b4878e0a
       size: 384169
+    outs:
+    - path: experiment_info.json
+      hash: md5
+      md5: c2b4571fd4a3a66a12d96df3f055ab2e
+      size: 164
+  model_registration:
+    cmd: python src/model/register_model.py
+    deps:
+    - path: experiment_info.json
+      hash: md5
+      md5: c2b4571fd4a3a66a12d96df3f055ab2e
+      size: 164
+    - path: src/model/register_model.py
+      hash: md5
+      md5: 40505cd7dd6d77c6d7cf2e6703067a2e
+      size: 2361
