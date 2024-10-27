@@ -126,7 +126,7 @@ def save_model_info(run_id: str, model_path: str, file_path: str) -> None:
 
 
 def main():
-    mlflow.set_tracking_uri("http://ec2-43-204-229-37.ap-south-1.compute.amazonaws.com:5000")
+    mlflow.set_tracking_uri("http://ec2-43-204-229-37.ap-south-1.compute.amazonaws.com:5000/")
 
     mlflow.set_experiment('dvc-pipeline-runs')
     
@@ -152,8 +152,7 @@ def main():
             # Log model and vectorizer
             mlflow.sklearn.log_model(model, "lgbm_model")
 
-            artifact_uri = mlflow.get_artifact_uri()
-            model_path = f"{artifact_uri}/lgbm_model"
+            model_path = "lgbm_model"
 
             # Save model info
             save_model_info(run.info.run_id, model_path, 'experiment_info.json')
