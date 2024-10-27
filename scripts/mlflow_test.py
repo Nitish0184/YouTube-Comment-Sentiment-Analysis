@@ -1,8 +1,17 @@
 import mlflow
+import random
 
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
+# Set the MLflow tracking URI
+mlflow.set_tracking_uri("http://ec2-43-204-229-37.ap-south-1.compute.amazonaws.com:5000/")
 
+# Start an MLflow run
 with mlflow.start_run():
-    mlflow.log_param("param1", 5)
-    mlflow.log_metric("metric1", 0.89)
-    print("Logged parameters and metrics.")
+    # Log some random parameters
+    mlflow.log_param("param1", random.randint(1, 100))
+    mlflow.log_param("param2", random.random())
+
+    # Log some random metrics
+    mlflow.log_metric("metric1", random.random())
+    mlflow.log_metric("metric2", random.uniform(0.5, 1.5))
+
+    print("Logged random parameters and metrics.")
